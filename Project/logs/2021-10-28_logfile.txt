@@ -1,0 +1,9 @@
+2021-10-28 23:26:25.9421 INFO Company with id: 0ccc6a11-8598-4c5f-b07a-fba2b00b1877 doesn't exist in the database.
+2021-10-28 23:26:42.4796 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:26:59.3492 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:27:52.8606 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:33:09.7197 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:33:13.1244 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:33:20.7219 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:34:03.9188 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
+2021-10-28 23:34:21.7993 INFO Company with id: c04a51cc-6a8d-426c-85e3-3a86bd35b48e doesn't exist in the database.
