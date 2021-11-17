@@ -36,7 +36,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeesFromDb = _repository.Employee.GetEmployees(companyId, trackChanges: false);
+            var employeesFromDb = await _repository.Employee.GetEmployeesAsync(companyId, trackChanges: false);
 
             var employeesDto = _mapper.Map<IEnumerable<EmployeeDto>>(employeesFromDb);
 
@@ -54,7 +54,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeeDb = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
+            var employeeDb = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
 
             if (employeeDb == null)
             {
@@ -108,7 +108,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeeCompany = _repository.Employee.GetEmployee(companyId, id, trackChanges: false);
+            var employeeCompany = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: false);
             if (employeeCompany == null)
             {
                 _logger.LogInfo($"Employee with {id} doesnt' exist in the database.");
@@ -143,7 +143,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+            var employeeEntity = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: true);
             if (employeeEntity == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
@@ -172,7 +172,7 @@ namespace CompanyEmployees.Controllers
                 return NotFound();
             }
 
-            var employeeEntity = _repository.Employee.GetEmployee(companyId, id, trackChanges: true);
+            var employeeEntity = await _repository.Employee.GetEmployeeAsync(companyId, id, trackChanges: true);
             if (employeeEntity == null)
             {
                 _logger.LogInfo($"Employee with id: {id} doesn't exist in the database.");
