@@ -1,3 +1,4 @@
+using CompanyEmployees.ActionFilters;
 using CompanyEmployees.Extensions;
 using Contracts;
 using Microsoft.AspNetCore.Builder;
@@ -38,10 +39,9 @@ namespace CompanyEmployees
             services.ConfigureSqlContext(Configuration);
             services.ConfigureRepositoryManager();
 
-            services.Configure<ApiBehaviorOptions>(options =>
-            {
-                options.SuppressModelStateInvalidFilter = true;
-            });
+            services.AddAutoMapper(typeof(Startup));
+
+            services.AddScoped<ValidationFilterAttribute>();
 
             services.AddControllers(config =>
             {
@@ -56,7 +56,10 @@ namespace CompanyEmployees
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CompanyEmployees", Version = "v1" });
             });
 
-            services.AddAutoMapper(typeof(Startup));
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.SuppressModelStateInvalidFilter = true;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
