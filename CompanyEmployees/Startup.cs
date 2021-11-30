@@ -42,6 +42,7 @@ namespace CompanyEmployees
             services.AddAutoMapper(typeof(Startup));
 
             services.AddScoped<ValidationFilterAttribute>();
+            services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
 
             services.AddControllers(config =>
             {
