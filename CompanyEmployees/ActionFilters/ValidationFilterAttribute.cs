@@ -15,7 +15,7 @@ namespace CompanyEmployees.ActionFilters
 
         public void OnActionExecuted(ActionExecutedContext context)
         {
-            throw new System.NotImplementedException();
+            //throw new System.NotImplementedException();
         }
 
         public void OnActionExecuting(ActionExecutingContext context)
