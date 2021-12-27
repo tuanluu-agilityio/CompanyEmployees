@@ -1,6 +1,7 @@
 using CompanyEmployees.ActionFilters;
 using CompanyEmployees.Extensions;
 using Contracts;
+using Entities.DataTransferObjects;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using NLog;
+using Repository.DataShaping;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -43,6 +45,7 @@ namespace CompanyEmployees
 
             services.AddScoped<ValidationFilterAttribute>();
             services.AddScoped<ValidateEmployeeForCompanyExistsAttribute>();
+            services.AddScoped<IDataShaper<EmployeeDto>, DataShaper<EmployeeDto>>();
 
             services.AddControllers(config =>
             {
